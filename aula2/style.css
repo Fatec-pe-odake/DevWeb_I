@@ -94,7 +94,7 @@ body {
     text-decoration: none;
     color: white;
     font-size: 16px;    
-    padding: 4vh 4vh;
+    padding: 5vh 3vh;
 }
 
 .nav-btn a:last-child {
@@ -108,4 +108,42 @@ body {
     background-color: #666;
     padding: 3.5vh 8vh;
     color: white;
+}
+
+/* ------------------------------------ */
+
+.container {
+    margin: 8vh;
+}
+
+.container h1 {
+    font-family: "Roboto Slab", Sans-serif;
+    padding-bottom: 15px;
+    font-size: 36px;
+    color: #005c6d;
+    font-weight: 400;
+    padding-top: 50px;
+}
+
+/* LINHA VERMELHA COM O SEMI-CIRCULO */
+
+.linha-separador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.linha {
+    background-color: red;
+    width: 100%;
+    height: 3px;
+    margin: 1vh 0;
+}
+
+.semi-circulo {
+    background-color: red;
+    width: 18%;
+    height: 17px;
+    border-radius: 20px;
 }

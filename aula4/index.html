@@ -41,6 +41,38 @@
         <ul id="lista-4"></ul>
     </div>
 
+    <div class="ativ5">
+        <h3>5 - Conversor de Temperatura</h3>
+        <input type="number" id="temperatura" placeholder="Digite a temperatura em °C">
+        <button onclick="ativ5()">Adicionar</button>
+        <div id="resultado"></div>
+    </div>
+
+    <div class="ativ6">
+        <h3>6 - Semáforo</h3>
+
+        <div class="semaforo-container" style="display: flex; gap: 20px; font-family: sans-serif;">
+            <div class="conjunto" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                <div class="circulo1 red" style="width: 125px; height: 125px; border: 1px black solid; border-radius: 50%;"></div>
+                <button class="btn-semaforos" onclick="ativ6('red')">ACENDER</button>
+            </div>
+            <div class="conjunto" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                <div class="circulo2 yellow" style="width: 125px; height: 125px; border: 1px black solid; border-radius: 50%;"></div>
+                <button class="btn-semaforos" onclick="ativ6('yellow')">ACENDER</button>
+            </div>
+            <div class="conjunto" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                <div class="circulo3 green" style="width: 125px; height: 125px; border: 1px black solid; border-radius: 50%;"></div>
+                <button class="btn-semaforos" onclick="ativ6('green')">ACENDER</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ativ7">
+        <h3>7 - Tabuada</h3>
+        <input type="number" id="numero" placeholder="Digite o numero para a tabuada">
+        <button onclick="ativ7()">descobrir</button>      
+        <div id="tabuada"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>

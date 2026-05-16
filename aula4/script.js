@@ -30,11 +30,49 @@ function ativ3() {
     }
 }
 
-// ATIVDADE 4 
+// ATIVIDADE 4 
 
 function ativ4() {
     let tarefa = document.getElementById('tarefa').value
     let li = document.createElement("li");
     li.textContent = tarefa;
     document.getElementById("lista-4").appendChild(li);
+}
+
+// ATIVIDADE 5
+
+function ativ5() {
+    let temp = document.getElementById('temperatura').value
+    let containerAtiv5 = document.getElementsByClassName('ativ5')
+
+    let farenheit = temp * ( 9 / 5 ) + 32
+    document.getElementById('resultado').textContent = `°F ${farenheit}`
+}
+
+// ATIVIDADE 6 
+
+function ativ6 (cor) {
+
+    let circle = document.getElementsByClassName(cor)
+    console.log(cor)
+    circle.style.backgroundColor = "yellow" 
+    setTimeout(() => {
+        console.log("Passaram-se 10 segundos!");
+    }, 10000); 
+    circle.style.backgroundColor = none
+
+}
+
+// ATIVIDADE 7
+
+function ativ7() {
+    let tabuada = document.getElementById('tabuada')
+    let numeroTabuada = document.getElementById('numero').value
+
+    const elementoTabuada = document.createElement("p")
+
+    for(let i = 0; i < 10; i++) {
+        elementoTabuada.textContent = `${i} X ${numeroTabuada} = ${i * numeroTabuada}`
+        tabuada.appendChild(elementoTabuada)
+    }
 }

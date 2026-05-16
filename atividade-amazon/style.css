@@ -1,0 +1,51 @@
+
+.navbar-amazon {
+  background-color: #131921;
+  color: white;
+  font-size: 14px;
+}
+
+.navbar-amazon a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-amazon a:hover {
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.search-bar {
+  max-width: 700px;
+  width: 100%;
+}
+
+.search-select {
+  border-radius: 5px 0 0 5px;
+  border: none;
+  background-color: #e6e6e6;
+}
+
+.search-input {
+  border: none;
+}
+
+.search-btn {
+  background-color: #febd69;
+  border-radius: 0 5px 5px 0;
+  border: none;
+}
+
+.search-btn:hover {
+  background-color: #f3a847;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.sub-text {
+  font-size: 12px;
+  color: #ccc;
+}

@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amazon.com.br - Replica simples da página inicial da Amazon Brasil">
+  <title>Amazon.com.br</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR PRINCIPAL ==================== -->
+  <nav class="navbar navbar-amazon py-2 px-2 px-lg-3">
+    <div class="container-fluid d-flex flex-wrap align-items-center gap-2">
+
+      <!-- Logo -->
+      <a href="#" class="nav-section text-decoration-none d-flex align-items-center text-white me-2">
+        <img src="img-amazon/logo-amazon.png" alt="Amazon" class="img-fluid bg-white rounded px-2 py-1" style="height: 35px; object-fit: contain;">
+      </a>
+
+      <!-- Localização -->
+      <div class="nav-section d-none d-md-flex align-items-center text-white me-2">
+        <i class="bi bi-geo-alt-fill me-1 fs-5"></i>
+        <div>
+          <small class="d-block text-white-50" style="font-size:.72rem;">Enviar para</small>
+          <span class="fw-bold" style="font-size:.85rem;">Bela Vista 01311‑000</span>
+        </div>
+      </div>
+
+      <!-- Barra de Pesquisa -->
+      <form class="search-bar flex-grow-1 me-2 order-3 order-lg-0" style="min-width:200px;">
+        <div class="input-group">
+          <select class="form-select search-select" aria-label="Categorias">
+            <option selected>Todos</option>
+            <option>Eletrônicos</option>
+            <option>Livros</option>
+            <option>Moda</option>
+            <option>Casa</option>
+            <option>Games</option>
+          </select>
+          <input type="search" class="form-control search-input" placeholder="Pesquisar Amazon.com.br" aria-label="Pesquisar">
+          <button class="btn search-btn" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </form>
+
+      <!-- Idioma -->
+      <div class="nav-section d-none d-lg-flex align-items-center text-white me-1">
+        <img src="https://flagcdn.com/w40/br.png" alt="BR" width="22" class="me-1 rounded-1">
+        <span class="fw-bold" style="font-size:.85rem;">PT</span>
+      </div>
+
+      <!-- Conta -->
+      <div class="nav-section text-white me-1">
+        <small class="d-block text-white-50" style="font-size:.72rem;">Olá, faça seu login</small>
+        <span class="fw-bold" style="font-size:.85rem;">Contas e Listas <i class="bi bi-caret-down-fill" style="font-size:.55rem;"></i></span>
+      </div>
+
+      <!-- Pedidos -->
+      <div class="nav-section text-white me-1">
+        <small class="d-block text-white-50" style="font-size:.72rem;">Devoluções</small>
+        <span class="fw-bold" style="font-size:.85rem;">e Pedidos</span>
+      </div>
+
+      <!-- Carrinho -->
+      <a href="#" class="nav-section text-decoration-none text-white d-flex align-items-end">
+        <div class="position-relative">
+          <i class="bi bi-cart3 fs-4"></i>
+          <span class="cart-count">3</span>
+        </div>
+        <span class="fw-bold ms-1 d-none d-md-inline" style="font-size:.85rem;">Carrinho</span>
+      </a>
+
+    </div>
+  </nav>
+
+  <!-- ==================== SUB-NAVBAR ==================== -->
+  <nav class="sub-navbar py-1 px-2 px-lg-3">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <ul class="nav flex-nowrap overflow-auto mb-0">
+        <li class="nav-item"><a class="nav-link fw-bold" href="#"><i class="bi bi-list me-1"></i>Todos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Venda na Amazon</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Chega em 15 min</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Ofertas do Dia</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Mais Vendidos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Games</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Livros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Música</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Casa</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Eletrônicos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Brinquedos e Jogos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Prime</a></li>
+      </ul>
+      <a href="#" class="nav-link promo-link text-white d-none d-lg-block ms-auto">The Boys S5 – Assista agora</a>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO BANNER ==================== -->
+  <section class="hero-banner d-flex align-items-center justify-content-center text-white text-center px-3 py-5">
+    <div class="hero-content">
+      <h1 class="display-5 fw-bold mb-2">Encontre o notebook ideal</h1>
+      <p class="fs-5 mb-3">Confira a seleção escolhida a dedo</p>
+      <a href="#" class="btn btn-warning btn-lg fw-bold rounded-pill px-4">
+        Frete GRÁTIS Prime &nbsp;<i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+    <div class="hero-fade"></div>
+  </section>
+
+  <!-- ==================== CARDS DE CATEGORIAS – LINHA 1 ==================== -->
+  <section class="container-fluid px-3 px-lg-4" style="margin-top:-40px; position:relative; z-index:3;">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+
+      <!-- Card 1 – Ofertas Mês da Terra -->
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Ofertas em Mês da Terra</h5>
+          <div class="row g-2 mb-2">
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod5.webp" alt="Cuidados Pessoais" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Cuidados Pessoais</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod6.webp" alt="Cozinha" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Cozinha</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod3.webp" alt="Recicláveis" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Recicláveis</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod4.jpg" alt="Jardim" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Jardim</p>
+            </div>
+          </div>
+          <a href="#" class="card-link">Ver mais</a>
+        </div>
+      </div>
+
+      <!-- Card 2 – Ofertas melhores avaliadas -->
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Ofertas melhores avaliadas</h5>
+          <div class="row g-2 mb-2">
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod1.webp" alt="Fones de Ouvido" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Fones de Ouvido</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod2.jpg" alt="Smartwatches" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Smartwatches</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod6.webp" alt="Controles" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Controles</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod4.jpg" alt="Câmeras" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Câmeras</p>
+            </div>
+          </div>
+          <a href="#" class="card-link">Ver mais</a>
+        </div>
+      </div>
+
+      <!-- Card 3 – Eleve sua rotina de beleza -->
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Eleve sua rotina de beleza</h5>
+          <div class="row g-2 mb-2">
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod5.webp" alt="Maquiagem" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Maquiagem</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod1.webp" alt="Skincare" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Skincare</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod2.jpg" alt="Cabelos" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Cabelos</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod6.webp" alt="Perfumaria" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Perfumaria</p>
+            </div>
+          </div>
+          <a href="#" class="card-link">Veja mais</a>
+        </div>
+      </div>
+
+      <!-- Card 4 – Semana da Casa e Cozinha -->
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Semana da Casa e Cozinha até 40% off</h5>
+          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:215px;">
+            <img src="img-amazon/prod5.webp" alt="Casa e Cozinha" class="img-fluid rounded" style="height:200px; object-fit:contain;">
+          </div>
+          <a href="#" class="card-link">Ver mais</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CARDS DE CATEGORIAS – LINHA 2 ==================== -->
+  <section class="container-fluid px-3 px-lg-4 mt-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+
+      <!-- Card 5 – Descubra sua próxima leitura -->
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Descubra sua próxima leitura</h5>
+          <div class="row g-2 mb-2">
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod3.webp" alt="Mais Vendidos" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Mais Vendidos</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod4.jpg" alt="Recomendados" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Recomendados para você</p>
+            </div>
+          </div>
+          <a href="#" class="card-link">Confira</a>
+        </div>
+      </div>
+
+      <!-- Card 6 – Dispositivos Amazon com Alexa -->
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Dispositivos Amazon com Alexa</h5>
+          <div class="row g-2 mb-2">
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <i class="bi bi-speaker-fill text-dark fs-1"></i>
+              </div>
+              <p class="product-label">Echo Pop</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <i class="bi bi-display text-info fs-1"></i>
+              </div>
+              <p class="product-label">Echo Show</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <i class="bi bi-tv-fill text-danger fs-1"></i>
+              </div>
+              <p class="product-label">Fire TV Stick</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <i class="bi bi-wifi text-primary fs-1"></i>
+              </div>
+              <p class="product-label">Echo Dot</p>
+            </div>
+          </div>
+          <a href="#" class="card-link">Ver todos em Dispositivos Amazon</a>
+        </div>
+      </div>
+
+      <!-- Card 7 – Conheça o Kindle -->
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Conheça o Kindle 11ª Geração</h5>
+          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:215px;">
+            <img src="img-amazon/prod3.webp" alt="Kindle" class="img-fluid rounded" style="height:200px; object-fit:contain;">
+          </div>
+          <a href="#" class="card-link">Confira tudo sobre o Kindle</a>
+        </div>
+      </div>
+
+      <!-- Card 8 – Echo e Fire TV -->
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Confira Echo e Fire TV com Alexa</h5>
+          <div class="row g-2 mb-2">
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod1.webp" alt="Echo Dot" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Echo Dot</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod4.jpg" alt="Fire TV Stick" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Fire TV Stick Lite</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod2.jpg" alt="Echo Move 3" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Echo Move 3</p>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod6.webp" alt="Echo Show 5" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+              <p class="product-label">Echo Show 5</p>
+            </div>
+          </div>
+          <a href="#" class="card-link">Ver mais em Dispositivos Amazon</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CENTRAL DA TORCIDA (Scroll Horizontal) ==================== -->
+  <section class="scroll-section container-fluid px-3 px-lg-4 mt-3 py-3">
+    <h2 class="scroll-title mb-3">Central da Torcida</h2>
+    <div class="d-flex flex-nowrap gap-3 scroll-row pb-2">
+      <div class="scroll-item text-center">
+        <div class="bg-success bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mx-auto overflow-hidden" style="width:110px;height:110px;">
+          <img src="img-amazon/prod1.webp" alt="Tudo pra torcer" class="img-fluid" style="height:110px; width:110px; object-fit:cover;">
+        </div>
+        <small class="d-block mt-2 fw-semibold">Tudo pra torcer</small>
+      </div>
+      <div class="scroll-item text-center">
+        <div class="bg-warning bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mx-auto overflow-hidden" style="width:110px;height:110px;">
+          <img src="img-amazon/prod2.jpg" alt="Todas as ofertas" class="img-fluid" style="height:110px; width:110px; object-fit:cover;">
+        </div>
+        <small class="d-block mt-2 fw-semibold">Todas as ofertas</small>
+      </div>
+      <div class="scroll-item text-center">
+        <div class="bg-danger bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mx-auto overflow-hidden" style="width:110px;height:110px;">
+          <img src="img-amazon/prod4.jpg" alt="TVs" class="img-fluid" style="height:110px; width:110px; object-fit:cover;">
+        </div>
+        <small class="d-block mt-2 fw-semibold">TVs</small>
+      </div>
+      <div class="scroll-item text-center">
+        <div class="bg-primary bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mx-auto overflow-hidden" style="width:110px;height:110px;">
+          <img src="img-amazon/prod5.webp" alt="Futebol" class="img-fluid" style="height:110px; width:110px; object-fit:cover;">
+        </div>
+        <small class="d-block mt-2 fw-semibold">Futebol</small>
+      </div>
+      <div class="scroll-item text-center">
+        <div class="bg-info bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mx-auto overflow-hidden" style="width:110px;height:110px;">
+          <img src="img-amazon/prod3.webp" alt="Moda" class="img-fluid" style="height:110px; width:110px; object-fit:cover;">
+        </div>
+        <small class="d-block mt-2 fw-semibold">Moda</small>
+      </div>
+      <div class="scroll-item text-center">
+        <div class="bg-secondary bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mx-auto overflow-hidden" style="width:110px;height:110px;">
+          <img src="img-amazon/prod6.webp" alt="Livros" class="img-fluid" style="height:110px; width:110px; object-fit:cover;">
+        </div>
+        <small class="d-block mt-2 fw-semibold">Livros, Álbuns e Figurinhas</small>
+      </div>
+      <div class="scroll-item text-center">
+        <div class="bg-dark bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mx-auto overflow-hidden" style="width:110px;height:110px;">
+          <img src="img-amazon/prod1.webp" alt="Eletrônicos" class="img-fluid" style="height:110px; width:110px; object-fit:cover;">
+        </div>
+        <small class="d-block mt-2 fw-semibold">Eletrônicos</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NOVIDADES POR CATEGORIA ==================== -->
+  <section class="scroll-section container-fluid px-3 px-lg-4 mt-3 py-3">
+    <h2 class="scroll-title mb-3">Novidades na Amazon por categoria</h2>
+    <div class="d-flex flex-nowrap gap-3 scroll-row pb-2">
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <i class="bi bi-grid-fill text-primary fs-1"></i>
+        </div>
+        <small class="d-block mt-2 fw-semibold text-center">Tudo</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <i class="bi bi-stars text-danger fs-1"></i>
+        </div>
+        <small class="d-block mt-2 fw-semibold text-center">Beleza</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <i class="bi bi-house-fill text-success fs-1"></i>
+        </div>
+        <small class="d-block mt-2 fw-semibold text-center">Casa</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <i class="bi bi-egg-fried text-warning fs-1"></i>
+        </div>
+        <small class="d-block mt-2 fw-semibold text-center">Cozinha</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <i class="bi bi-handbag text-info fs-1"></i>
+        </div>
+        <small class="d-block mt-2 fw-semibold text-center">Moda</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <i class="bi bi-phone-fill text-dark fs-1"></i>
+        </div>
+        <small class="d-block mt-2 fw-semibold text-center">Eletrônicos</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MAIS AMADOS POR CATEGORIA ==================== -->
+  <section class="scroll-section container-fluid px-3 px-lg-4 mt-3 py-3">
+    <h2 class="scroll-title mb-3">Mais amados por categoria</h2>
+    <div class="d-flex flex-nowrap gap-3 scroll-row pb-2">
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <i class="bi bi-heart-fill text-danger fs-1"></i>
+        </div>
+        <small class="d-block mt-2 fw-semibold text-center">Tudo</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <i class="bi bi-brush text-danger fs-1"></i>
+        </div>
+        <small class="d-block mt-2 fw-semibold text-center">Beleza</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <i class="bi bi-lamp-fill text-warning fs-1"></i>
+        </div>
+        <small class="d-block mt-2 fw-semibold text-center">Casa</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <i class="bi bi-cup-straw text-info fs-1"></i>
+        </div>
+        <small class="d-block mt-2 fw-semibold text-center">Cozinha</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <i class="bi bi-person-standing-dress text-primary fs-1"></i>
+        </div>
+        <small class="d-block mt-2 fw-semibold text-center">Moda</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <i class="bi bi-pc-display text-secondary fs-1"></i>
+        </div>
+        <small class="d-block mt-2 fw-semibold text-center">Eletrodomésticos</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CARDS – ELETRÔNICOS / PRIME / KITS / COZINHA ==================== -->
+  <section class="container-fluid px-3 px-lg-4 mt-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+
+      <!-- Eletrônicos até R$ 100 -->
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Eletrônicos até R$ 100</h5>
+          <div class="row g-2 mb-2">
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod1.webp" alt="Headset" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod2.jpg" alt="Mouse" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+            </div>
+          </div>
+          <a href="#" class="card-link">Veja Mais</a>
+        </div>
+      </div>
+
+      <!-- Frete GRÁTIS Prime: Casa -->
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Agora com frete GRÁTIS Prime: Casa</h5>
+          <div class="row g-2 mb-2">
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <i class="bi bi-lightbulb-fill text-warning fs-1"></i>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <i class="bi bi-door-open-fill text-success fs-1"></i>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="card-link">Veja produtos com frete GRÁTIS Prime</a>
+        </div>
+      </div>
+
+      <!-- Confira Kits de Produto -->
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Confira Kits de Produto</h5>
+          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:215px;">
+            <img src="img-amazon/prod6.webp" alt="Kits de Produto" class="img-fluid rounded" style="height:200px; object-fit:contain;">
+          </div>
+          <a href="#" class="card-link">Veja mais em Kits de Produto</a>
+        </div>
+      </div>
+
+      <!-- Novidades em Cozinha -->
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <div class="d-flex justify-content-between align-items-start">
+            <h5 class="card-title">Novidades em Cozinha</h5>
+            <a href="#" class="card-link">Veja mais...</a>
+          </div>
+          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:140px;">
+            <img src="img-amazon/prod5.webp" alt="Jarra de Vidro" class="img-fluid rounded" style="height:130px; object-fit:contain;">
+          </div>
+          <p class="mb-1 fw-semibold" style="font-size:.85rem;">Jarra de Vidro 1.5L Design Moderno</p>
+          <div class="text-warning mb-1" style="font-size:.8rem;">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+            <span class="text-muted ms-1">17</span>
+          </div>
+          <p class="mb-0"><strong>R$ 2 <sup>99</sup></strong></p>
+          <small class="text-muted">Entrega GRÁTIS dom., 19 de abr.</small>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CUPONS EM CAMPO ==================== -->
+  <section class="scroll-section container-fluid px-3 px-lg-4 mt-3 py-3">
+    <h2 class="scroll-title mb-3">Cupons em campo</h2>
+    <div class="d-flex flex-nowrap gap-3 scroll-row pb-2">
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
+          <img src="img-amazon/prod1.webp" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+        </div>
+        <small class="d-block mt-1 text-success fw-bold text-center">R$ 200 off em Notebooks</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
+          <img src="img-amazon/prod4.jpg" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+        </div>
+        <small class="d-block mt-1 text-success fw-bold text-center">R$ 200 pra assistir no papai</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
+          <img src="img-amazon/prod6.webp" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+        </div>
+        <small class="d-block mt-1 text-success fw-bold text-center">20% off em Futebol</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
+          <img src="img-amazon/prod2.jpg" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+        </div>
+        <small class="d-block mt-1 text-success fw-bold text-center">15% off em Camisas</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
+          <img src="img-amazon/prod1.webp" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+        </div>
+        <small class="d-block mt-1 text-success fw-bold text-center">16% off em Buds FIT0</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
+          <img src="img-amazon/prod2.jpg" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+        </div>
+        <small class="d-block mt-1 text-success fw-bold text-center">15% off em Eletrônicos</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
+          <img src="img-amazon/prod5.webp" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+        </div>
+        <small class="d-block mt-1 text-success fw-bold text-center">10% off</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CARDS – MAIS VENDIDOS ==================== -->
+  <section class="container-fluid px-3 px-lg-4 mt-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Em destaque em Celulares e Comunicação</h5>
+          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:160px;">
+            <img src="img-amazon/prod1.webp" alt="iPhone" class="img-fluid rounded" style="height:150px; object-fit:contain;">
+          </div>
+          <p class="mb-1 fw-semibold" style="font-size:.82rem;">Apple iPhone 17 Pro 512 GB - Azul intenso</p>
+          <p class="mb-0 text-danger fw-bold">R$12.999,00</p>
+          <a href="#" class="card-link mt-1 d-inline-block">Compre agora</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Mais Vendidos em Produtos para Câmeras e Foto</h5>
+          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:160px;">
+            <img src="img-amazon/prod4.jpg" alt="Câmeras e Foto" class="img-fluid rounded" style="height:150px; object-fit:contain;">
+          </div>
+          <a href="#" class="card-link">Ver mais</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Em destaque em Beleza de Luxo</h5>
+          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:160px;">
+            <img src="img-amazon/prod5.webp" alt="Beleza de Luxo" class="img-fluid rounded" style="height:150px; object-fit:contain;">
+          </div>
+          <p class="mb-1 fw-semibold" style="font-size:.82rem;">EUCERIN S8 Sabonete Facial Anti-idade</p>
+          <p class="mb-0"><span class="text-danger fw-bold">R$269,00</span> <small class="text-muted text-decoration-line-through">R$ 349,90</small></p>
+          <a href="#" class="card-link mt-1 d-inline-block">Compre agora</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Mais Vendidos em Dispositivos Amazon e Acessórios</h5>
+          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:160px;">
+            <img src="img-amazon/prod2.jpg" alt="Dispositivos Amazon" class="img-fluid rounded" style="height:150px; object-fit:contain;">
+          </div>
+          <a href="#" class="card-link">Ver mais</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== MAIS VENDIDOS ELETRÔNICOS (scroll) ==================== -->
+  <section class="scroll-section container-fluid px-3 px-lg-4 mt-3 py-3">
+    <h2 class="scroll-title mb-3">Mais Vendidos em Eletrônicos</h2>
+    <div class="d-flex flex-nowrap gap-3 scroll-row pb-2">
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <img src="img-amazon/prod1.webp" alt="Eletrônico 1" class="img-fluid" style="height:120px; object-fit:contain;">
+        </div>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <img src="img-amazon/prod2.jpg" alt="Eletrônico 2" class="img-fluid" style="height:120px; object-fit:contain;">
+        </div>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <img src="img-amazon/prod3.webp" alt="Eletrônico 3" class="img-fluid" style="height:120px; object-fit:contain;">
+        </div>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <img src="img-amazon/prod4.jpg" alt="Eletrônico 4" class="img-fluid" style="height:120px; object-fit:contain;">
+        </div>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <img src="img-amazon/prod5.webp" alt="Eletrônico 5" class="img-fluid" style="height:120px; object-fit:contain;">
+        </div>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <img src="img-amazon/prod6.webp" alt="Eletrônico 6" class="img-fluid" style="height:120px; object-fit:contain;">
+        </div>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
+          <i class="bi bi-mouse2-fill text-secondary fs-1"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CUPONS EM DESTAQUE (scroll) ==================== -->
+  <section class="scroll-section container-fluid px-3 px-lg-4 mt-3 py-3">
+    <h2 class="scroll-title mb-3">Confira os cupons em destaque</h2>
+    <div class="d-flex flex-nowrap gap-3 scroll-row pb-2">
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
+          <img src="img-amazon/prod4.jpg" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+        </div>
+        <small class="d-block mt-1 text-center">15% off em Ventilação</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
+          <img src="img-amazon/prod5.webp" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+        </div>
+        <small class="d-block mt-1 text-center">20% off em Cama, Mesa e Banho</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
+          <img src="img-amazon/prod6.webp" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+        </div>
+        <small class="d-block mt-1 text-center">$4 no app: 30% off em Organização</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
+          <img src="img-amazon/prod5.webp" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+        </div>
+        <small class="d-block mt-1 text-center">$4 no app: 17% off em Eletroportáteis</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
+          <img src="img-amazon/prod6.webp" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+        </div>
+        <small class="d-block mt-1 text-center">Até 40% off em Itens para Café</small>
+      </div>
+      <div class="scroll-item">
+        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
+          <img src="img-amazon/prod3.webp" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+        </div>
+        <small class="d-block mt-1 text-center">$4 no app: 20% off em Cozinha</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CARDS – MAIS VENDIDOS 2 ==================== -->
+  <section class="container-fluid px-3 px-lg-4 mt-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Mais Vendidos em Livros</h5>
+          <div class="row g-2 mb-2">
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod3.webp" alt="Livro 1" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
+                <img src="img-amazon/prod6.webp" alt="Livro 2" class="img-fluid rounded" style="height:90px; object-fit:contain;">
+              </div>
+            </div>
+          </div>
+          <p class="mb-1 fw-semibold" style="font-size:.82rem;">Guia Folha de Colorismo + livros</p>
+          <p class="mb-0 fw-bold">R$69<sup>99</sup></p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Em destaque em Beleza de Luxo</h5>
+          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:160px;">
+            <img src="img-amazon/prod5.webp" alt="Shampoo" class="img-fluid rounded" style="height:150px; object-fit:contain;">
+          </div>
+          <p class="mb-1 fw-semibold" style="font-size:.82rem;">Vichy Dercos Shampoo Collagen Repair</p>
+          <p class="mb-0"><span class="text-danger fw-bold">R$175,90</span></p>
+          <a href="#" class="card-link mt-1 d-inline-block">Compre agora</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Mais Vendidos em Casa</h5>
+          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:160px;">
+            <img src="img-amazon/prod4.jpg" alt="Aspirador" class="img-fluid rounded" style="height:150px; object-fit:contain;">
+          </div>
+          <p class="mb-1 fw-semibold" style="font-size:.82rem;">Aspirador Giratório 360° para Tornar...</p>
+          <div class="text-warning mb-1" style="font-size:.8rem;">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <span class="text-muted ms-1">1.0</span>
+          </div>
+          <p class="mb-0 fw-bold">R$299<sup>00</sup></p>
+          <small class="text-muted">Entrega GRÁTIS dom., 19 de abr.</small>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <h5 class="card-title">Novidades em Construção</h5>
+          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:160px;">
+            <img src="img-amazon/prod3.webp" alt="Construção" class="img-fluid rounded" style="height:150px; object-fit:contain;">
+          </div>
+          <p class="mb-1 fw-semibold" style="font-size:.82rem;">Vadia Fire...</p>
+          <p class="mb-0 fw-bold">R$299<sup>00</sup></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== GAMES E CONSOLES (Cards) ==================== -->
+  <section class="container-fluid px-3 px-lg-4 mt-3 mb-4">
+    <div class="row">
+      <div class="col-12">
+        <div class="card category-card shadow-sm p-3">
+          <h5 class="card-title mb-3">Mais Vendidos em Games e Consoles</h5>
+          <div class="d-flex flex-nowrap gap-3 scroll-row pb-2">
+            <div class="scroll-item">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:180px;height:180px;">
+                <img src="img-amazon/prod6.webp" alt="Game 1" class="img-fluid" style="height:160px; object-fit:contain;">
+              </div>
+            </div>
+            <div class="scroll-item">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:180px;height:180px;">
+                <img src="img-amazon/prod1.webp" alt="Game 2" class="img-fluid" style="height:160px; object-fit:contain;">
+              </div>
+            </div>
+            <div class="scroll-item">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:180px;height:180px;">
+                <img src="img-amazon/prod2.jpg" alt="Game 3" class="img-fluid" style="height:160px; object-fit:contain;">
+              </div>
+            </div>
+            <div class="scroll-item">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:180px;height:180px;">
+                <img src="img-amazon/prod3.webp" alt="Game 4" class="img-fluid" style="height:160px; object-fit:contain;">
+              </div>
+            </div>
+            <div class="scroll-item">
+              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:180px;height:180px;">
+                <img src="img-amazon/prod4.jpg" alt="Game 5" class="img-fluid" style="height:160px; object-fit:contain;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BANNER LOGIN ==================== -->
+  <section class="login-banner py-5 text-center">
+    <h3 class="fw-bold mb-3">Veja recomendações personalizadas</h3>
+    <a href="#" class="btn btn-amz mb-2">Faça seu login</a>
+    <p class="text-muted mt-2" style="font-size:.85rem;">
+      Cliente novo? <a href="#" style="color: var(--amz-link-blue);">Comece aqui.</a>
+    </p>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <!-- Voltar ao início -->
+  <div class="footer-top text-center py-3" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <span class="text-white" style="font-size:.85rem;">Voltar ao início</span>
+  </div>
+
+  <!-- Links do Rodapé -->
+  <footer class="footer-main py-4 px-3 px-lg-5">
+    <div class="container">
+      <div class="row row-cols-2 row-cols-md-4 g-4">
+
+        <div class="col">
+          <h6>Conheça-nos</h6>
+          <a href="#" class="d-block">Sobre a Amazon</a>
+          <a href="#" class="d-block">Informações</a>
+          <a href="#" class="d-block">Garantia A-Z</a>
+          <a href="#" class="d-block">Comunicados à Imprensa</a>
+          <a href="#" class="d-block">Oportunidades</a>
+          <a href="#" class="d-block">Acessibilidade</a>
+          <a href="#" class="d-block">Amazon Science</a>
+        </div>
+
+        <div class="col">
+          <h6>Ganhe dinheiro conosco</h6>
+          <a href="#" class="d-block">Venda na Amazon</a>
+          <a href="#" class="d-block">Proteja e construa a sua marca</a>
+          <a href="#" class="d-block">Fornecça para a Amazon</a>
+          <a href="#" class="d-block">Publique seu livro</a>
+          <a href="#" class="d-block">Anuncie seus produtos</a>
+        </div>
+
+        <div class="col">
+          <h6>Pagamento</h6>
+          <a href="#" class="d-block">Meios de Pagamento</a>
+          <a href="#" class="d-block">Cartões de crédito</a>
+          <a href="#" class="d-block">Cartão de crédito</a>
+          <a href="#" class="d-block">Compras com Ponto</a>
+        </div>
+
+        <div class="col">
+          <h6>Deixe-nos ajudar você</h6>
+          <a href="#" class="d-block">Sua conta</a>
+          <a href="#" class="d-block">Seus Pedidos</a>
+          <a href="#" class="d-block">Frete e prazos de entrega</a>
+          <a href="#" class="d-block">Devoluções e reembolsos</a>
+          <a href="#" class="d-block">Gerenciar conteúdo e dispositivos</a>
+          <a href="#" class="d-block">Recall e alertas de segurança de produto</a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Logo inferior e idioma -->
+  <div class="footer-bottom text-center py-4">
+    <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
+      <a href="#" class="text-decoration-none">
+        <img src="img-amazon/logo-amazon.png" alt="Amazon" class="img-fluid bg-white rounded px-3 py-1" style="height: 40px; object-fit: contain;">
+      </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap">
+      <button class="btn btn-sm btn-outline-secondary text-white rounded-1">
+        <i class="bi bi-globe me-1"></i>Português
+      </button>
+      <button class="btn btn-sm btn-outline-secondary text-white rounded-1">
+        <img src="https://flagcdn.com/w40/br.png" alt="BR" width="18" class="me-1 rounded-1"> Brasil
+      </button>
+    </div>
+  </div>
+
+  <!-- Informações legais -->
+  <div class="footer-legal text-center py-3 px-3">
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-2">
+      <a href="#" class="text-decoration-none text-white-50" style="font-size:.75rem;">Condições de Uso</a>
+      <a href="#" class="text-decoration-none text-white-50" style="font-size:.75rem;">Notificação de Privacidade</a>
+      <a href="#" class="text-decoration-none text-white-50" style="font-size:.75rem;">Cookies</a>
+      <a href="#" class="text-decoration-none text-white-50" style="font-size:.75rem;">Anúncios Baseados em Interesses</a>
+    </div>
+    <p class="mb-1" style="font-size:.72rem; color:#999;">© 2012‑2025, Amazon.com, Inc. ou suas afiliadas</p>
+    <p class="mb-0" style="font-size:.68rem; color:#777;">
+      Av. Juscelino Kubitschek, 2041 - Torre C, 18º andar - São Paulo, CEP 04543‑011. 
+      Fale conosco: <a href="#" class="text-info">ajuda.amazon.com.br/contactus</a>
+    </p>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

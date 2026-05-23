@@ -66,13 +66,16 @@ function ativ6 (cor) {
 // ATIVIDADE 7
 
 function ativ7() {
-    let tabuada = document.getElementById('tabuada')
-    let numeroTabuada = document.getElementById('numero').value
+    let tabuada = document.getElementById('tabuada');
+    let numeroTabuada = document.getElementById('numero').value;
 
-    const elementoTabuada = document.createElement("p")
+    // Limpa a tabuada anterior
+    tabuada.innerHTML = '';
 
-    for(let i = 0; i < 10; i++) {
-        elementoTabuada.textContent = `${i} X ${numeroTabuada} = ${i * numeroTabuada}`
-        tabuada.appendChild(elementoTabuada)
+    // Cria a tabuada de 1 a 10
+    for(let i = 1; i <= 10; i++) {
+        let elementoTabuada = document.createElement("p");
+        elementoTabuada.textContent = `${numeroTabuada} x ${i} = ${numeroTabuada * i}`;
+        tabuada.appendChild(elementoTabuada);
     }
 }

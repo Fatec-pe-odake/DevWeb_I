@@ -51,16 +51,19 @@ function ativ5() {
 
 // ATIVIDADE 6 
 
-function ativ6 (cor) {
+function ativ6(cor) {
+    const cores = ['red', 'yellow', 'greenyellow'];
 
-    let circle = document.getElementsByClassName(cor)
-    console.log(cor)
-    circle.style.backgroundColor = "yellow" 
-    setTimeout(() => {
-        console.log("Passaram-se 10 segundos!");
-    }, 10000); 
-    circle.style.backgroundColor = none
+    cores.forEach((corAtual) => {
+        const elemento = document.querySelector(`.${corAtual}`);
+        if (!elemento) return;
 
+        if (corAtual === cor) {
+            elemento.style.backgroundColor = corAtual;
+        } else {
+            elemento.style.backgroundColor = 'transparent';
+        }
+    });
 }
 
 // ATIVIDADE 7

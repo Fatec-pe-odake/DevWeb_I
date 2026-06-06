@@ -5,25 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Amazon.com.br - Replica simples da página inicial da Amazon Brasil">
   <title>Amazon.com.br</title>
-  <!-- Bootstrap 5 CSS -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ==================== NAVBAR PRINCIPAL ==================== -->
+  
   <nav class="navbar navbar-amazon py-2 px-2 px-lg-3">
     <div class="container-fluid d-flex flex-wrap align-items-center gap-2">
 
-      <!-- Logo -->
+      
       <a href="#" class="nav-section text-decoration-none d-flex align-items-center text-white me-2">
-        <img src="img-amazon/logo-amazon.png" alt="Amazon" class="img-fluid bg-white rounded px-2 py-1" style="height: 35px; object-fit: contain;">
+        <img src="img-amazon/logo-amazon.png" alt="Amazon" class="img-fluid rounded px-2 py-1" style="height: 35px; object-fit: contain;">
       </a>
 
-      <!-- Localização -->
+      
       <div class="nav-section d-none d-md-flex align-items-center text-white me-2">
         <i class="bi bi-geo-alt-fill me-1 fs-5"></i>
         <div>
@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <!-- Barra de Pesquisa -->
+      
       <form class="search-bar flex-grow-1 me-2 order-3 order-lg-0" style="min-width:200px;">
         <div class="input-group">
           <select class="form-select search-select" aria-label="Categorias">
@@ -50,25 +50,19 @@
         </div>
       </form>
 
-      <!-- Idioma -->
-      <div class="nav-section d-none d-lg-flex align-items-center text-white me-1">
-        <img src="https://flagcdn.com/w40/br.png" alt="BR" width="22" class="me-1 rounded-1">
-        <span class="fw-bold" style="font-size:.85rem;">PT</span>
-      </div>
-
-      <!-- Conta -->
+      
       <div class="nav-section text-white me-1">
         <small class="d-block text-white-50" style="font-size:.72rem;">Olá, faça seu login</small>
         <span class="fw-bold" style="font-size:.85rem;">Contas e Listas <i class="bi bi-caret-down-fill" style="font-size:.55rem;"></i></span>
       </div>
 
-      <!-- Pedidos -->
+      
       <div class="nav-section text-white me-1">
         <small class="d-block text-white-50" style="font-size:.72rem;">Devoluções</small>
         <span class="fw-bold" style="font-size:.85rem;">e Pedidos</span>
       </div>
 
-      <!-- Carrinho -->
+      
       <a href="#" class="nav-section text-decoration-none text-white d-flex align-items-end">
         <div class="position-relative">
           <i class="bi bi-cart3 fs-4"></i>
@@ -80,7 +74,7 @@
     </div>
   </nav>
 
-  <!-- ==================== SUB-NAVBAR ==================== -->
+  
   <nav class="sub-navbar py-1 px-2 px-lg-3">
     <div class="container-fluid d-flex align-items-center justify-content-between">
       <ul class="nav flex-nowrap overflow-auto mb-0">
@@ -101,23 +95,66 @@
     </div>
   </nav>
 
-  <!-- ==================== HERO BANNER ==================== -->
-  <section class="hero-banner d-flex align-items-center justify-content-center text-white text-center px-3 py-5">
-    <div class="hero-content">
-      <h1 class="display-5 fw-bold mb-2">Encontre o notebook ideal</h1>
-      <p class="fs-5 mb-3">Confira a seleção escolhida a dedo</p>
-      <a href="#" class="btn btn-warning btn-lg fw-bold rounded-pill px-4">
-        Frete GRÁTIS Prime &nbsp;<i class="bi bi-arrow-right"></i>
-      </a>
+  
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="hero-fade"></div>
-  </section>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <section class="hero-banner hero-orange d-flex align-items-center justify-content-center text-white text-center px-3 py-5">
+          <div class="hero-content">
+            <h1 class="display-5 fw-bold mb-2">Encontre o notebook ideal</h1>
+            <p class="fs-5 mb-3">Confira a seleção escolhida a dedo</p>
+            <a href="#" class="btn btn-warning btn-lg fw-bold rounded-pill px-4">
+              Frete GRÁTIS Prime &nbsp;<i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="hero-fade"></div>
+        </section>
+      </div>
+      <div class="carousel-item">
+        <section class="hero-banner hero-blue d-flex align-items-center justify-content-center text-white text-center px-3 py-5">
+          <div class="hero-content">
+            <h1 class="display-5 fw-bold mb-2">Dispositivos Echo com Alexa</h1>
+            <p class="fs-5 mb-3">Facilite seu dia a dia com caixas inteligentes</p>
+            <a href="#" class="btn btn-warning btn-lg fw-bold rounded-pill px-4">
+              Aproveite agora &nbsp;<i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="hero-fade"></div>
+        </section>
+      </div>
+      <div class="carousel-item">
+        <section class="hero-banner hero-dark d-flex align-items-center justify-content-center text-white text-center px-3 py-5">
+          <div class="hero-content">
+            <h1 class="display-5 fw-bold mb-2">Ofertas exclusivas da Semana</h1>
+            <p class="fs-5 mb-3">Frete GRÁTIS em milhares de produtos com Prime</p>
+            <a href="#" class="btn btn-warning btn-lg fw-bold rounded-pill px-4">
+              Ver ofertas &nbsp;<i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="hero-fade"></div>
+        </section>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
 
-  <!-- ==================== CARDS DE CATEGORIAS – LINHA 1 ==================== -->
+  
   <section class="container-fluid px-3 px-lg-4" style="margin-top:-40px; position:relative; z-index:3;">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
 
-      <!-- Card 1 – Ofertas Mês da Terra -->
+      
       <div class="col">
         <div class="card category-card h-100 shadow-sm p-3">
           <h5 class="card-title">Ofertas em Mês da Terra</h5>
@@ -151,7 +188,7 @@
         </div>
       </div>
 
-      <!-- Card 2 – Ofertas melhores avaliadas -->
+      
       <div class="col">
         <div class="card category-card h-100 shadow-sm p-3">
           <h5 class="card-title">Ofertas melhores avaliadas</h5>
@@ -185,7 +222,7 @@
         </div>
       </div>
 
-      <!-- Card 3 – Eleve sua rotina de beleza -->
+      
       <div class="col">
         <div class="card category-card h-100 shadow-sm p-3">
           <h5 class="card-title">Eleve sua rotina de beleza</h5>
@@ -219,7 +256,7 @@
         </div>
       </div>
 
-      <!-- Card 4 – Semana da Casa e Cozinha -->
+      
       <div class="col">
         <div class="card category-card h-100 shadow-sm p-3">
           <h5 class="card-title">Semana da Casa e Cozinha até 40% off</h5>
@@ -233,11 +270,11 @@
     </div>
   </section>
 
-  <!-- ==================== CARDS DE CATEGORIAS – LINHA 2 ==================== -->
+  
   <section class="container-fluid px-3 px-lg-4 mt-3">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
 
-      <!-- Card 5 – Descubra sua próxima leitura -->
+      
       <div class="col">
         <div class="card category-card h-100 shadow-sm p-3">
           <h5 class="card-title">Descubra sua próxima leitura</h5>
@@ -259,32 +296,32 @@
         </div>
       </div>
 
-      <!-- Card 6 – Dispositivos Amazon com Alexa -->
+      
       <div class="col">
         <div class="card category-card h-100 shadow-sm p-3">
           <h5 class="card-title">Dispositivos Amazon com Alexa</h5>
           <div class="row g-2 mb-2">
             <div class="col-6">
               <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
-                <i class="bi bi-speaker-fill text-dark fs-1"></i>
+                <img src="img-amazon/prod1.webp" alt="Echo Pop" class="img-fluid rounded" style="height:90px; object-fit:contain;">
               </div>
               <p class="product-label">Echo Pop</p>
             </div>
             <div class="col-6">
               <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
-                <i class="bi bi-display text-info fs-1"></i>
+                <img src="img-amazon/prod2.jpg" alt="Echo Show" class="img-fluid rounded" style="height:90px; object-fit:contain;">
               </div>
               <p class="product-label">Echo Show</p>
             </div>
             <div class="col-6">
               <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
-                <i class="bi bi-tv-fill text-danger fs-1"></i>
+                <img src="img-amazon/prod3.webp" alt="Fire TV Stick" class="img-fluid rounded" style="height:90px; object-fit:contain;">
               </div>
               <p class="product-label">Fire TV Stick</p>
             </div>
             <div class="col-6">
               <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
-                <i class="bi bi-wifi text-primary fs-1"></i>
+                <img src="img-amazon/prod4.jpg" alt="Echo Dot" class="img-fluid rounded" style="height:90px; object-fit:contain;">
               </div>
               <p class="product-label">Echo Dot</p>
             </div>
@@ -293,7 +330,7 @@
         </div>
       </div>
 
-      <!-- Card 7 – Conheça o Kindle -->
+      
       <div class="col">
         <div class="card category-card h-100 shadow-sm p-3">
           <h5 class="card-title">Conheça o Kindle 11ª Geração</h5>
@@ -304,7 +341,7 @@
         </div>
       </div>
 
-      <!-- Card 8 – Echo e Fire TV -->
+      
       <div class="col">
         <div class="card category-card h-100 shadow-sm p-3">
           <h5 class="card-title">Confira Echo e Fire TV com Alexa</h5>
@@ -341,7 +378,7 @@
     </div>
   </section>
 
-  <!-- ==================== CENTRAL DA TORCIDA (Scroll Horizontal) ==================== -->
+  
   <section class="scroll-section container-fluid px-3 px-lg-4 mt-3 py-3">
     <h2 class="scroll-title mb-3">Central da Torcida</h2>
     <div class="d-flex flex-nowrap gap-3 scroll-row pb-2">
@@ -390,220 +427,7 @@
     </div>
   </section>
 
-  <!-- ==================== NOVIDADES POR CATEGORIA ==================== -->
-  <section class="scroll-section container-fluid px-3 px-lg-4 mt-3 py-3">
-    <h2 class="scroll-title mb-3">Novidades na Amazon por categoria</h2>
-    <div class="d-flex flex-nowrap gap-3 scroll-row pb-2">
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
-          <i class="bi bi-grid-fill text-primary fs-1"></i>
-        </div>
-        <small class="d-block mt-2 fw-semibold text-center">Tudo</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
-          <i class="bi bi-stars text-danger fs-1"></i>
-        </div>
-        <small class="d-block mt-2 fw-semibold text-center">Beleza</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
-          <i class="bi bi-house-fill text-success fs-1"></i>
-        </div>
-        <small class="d-block mt-2 fw-semibold text-center">Casa</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
-          <i class="bi bi-egg-fried text-warning fs-1"></i>
-        </div>
-        <small class="d-block mt-2 fw-semibold text-center">Cozinha</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
-          <i class="bi bi-handbag text-info fs-1"></i>
-        </div>
-        <small class="d-block mt-2 fw-semibold text-center">Moda</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
-          <i class="bi bi-phone-fill text-dark fs-1"></i>
-        </div>
-        <small class="d-block mt-2 fw-semibold text-center">Eletrônicos</small>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== MAIS AMADOS POR CATEGORIA ==================== -->
-  <section class="scroll-section container-fluid px-3 px-lg-4 mt-3 py-3">
-    <h2 class="scroll-title mb-3">Mais amados por categoria</h2>
-    <div class="d-flex flex-nowrap gap-3 scroll-row pb-2">
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
-          <i class="bi bi-heart-fill text-danger fs-1"></i>
-        </div>
-        <small class="d-block mt-2 fw-semibold text-center">Tudo</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
-          <i class="bi bi-brush text-danger fs-1"></i>
-        </div>
-        <small class="d-block mt-2 fw-semibold text-center">Beleza</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
-          <i class="bi bi-lamp-fill text-warning fs-1"></i>
-        </div>
-        <small class="d-block mt-2 fw-semibold text-center">Casa</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
-          <i class="bi bi-cup-straw text-info fs-1"></i>
-        </div>
-        <small class="d-block mt-2 fw-semibold text-center">Cozinha</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
-          <i class="bi bi-person-standing-dress text-primary fs-1"></i>
-        </div>
-        <small class="d-block mt-2 fw-semibold text-center">Moda</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
-          <i class="bi bi-pc-display text-secondary fs-1"></i>
-        </div>
-        <small class="d-block mt-2 fw-semibold text-center">Eletrodomésticos</small>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== CARDS – ELETRÔNICOS / PRIME / KITS / COZINHA ==================== -->
-  <section class="container-fluid px-3 px-lg-4 mt-3">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
-
-      <!-- Eletrônicos até R$ 100 -->
-      <div class="col">
-        <div class="card category-card h-100 shadow-sm p-3">
-          <h5 class="card-title">Eletrônicos até R$ 100</h5>
-          <div class="row g-2 mb-2">
-            <div class="col-6">
-              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
-                <img src="img-amazon/prod1.webp" alt="Headset" class="img-fluid rounded" style="height:90px; object-fit:contain;">
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
-                <img src="img-amazon/prod2.jpg" alt="Mouse" class="img-fluid rounded" style="height:90px; object-fit:contain;">
-              </div>
-            </div>
-          </div>
-          <a href="#" class="card-link">Veja Mais</a>
-        </div>
-      </div>
-
-      <!-- Frete GRÁTIS Prime: Casa -->
-      <div class="col">
-        <div class="card category-card h-100 shadow-sm p-3">
-          <h5 class="card-title">Agora com frete GRÁTIS Prime: Casa</h5>
-          <div class="row g-2 mb-2">
-            <div class="col-6">
-              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
-                <i class="bi bi-lightbulb-fill text-warning fs-1"></i>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
-                <i class="bi bi-door-open-fill text-success fs-1"></i>
-              </div>
-            </div>
-          </div>
-          <a href="#" class="card-link">Veja produtos com frete GRÁTIS Prime</a>
-        </div>
-      </div>
-
-      <!-- Confira Kits de Produto -->
-      <div class="col">
-        <div class="card category-card h-100 shadow-sm p-3">
-          <h5 class="card-title">Confira Kits de Produto</h5>
-          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:215px;">
-            <img src="img-amazon/prod6.webp" alt="Kits de Produto" class="img-fluid rounded" style="height:200px; object-fit:contain;">
-          </div>
-          <a href="#" class="card-link">Veja mais em Kits de Produto</a>
-        </div>
-      </div>
-
-      <!-- Novidades em Cozinha -->
-      <div class="col">
-        <div class="card category-card h-100 shadow-sm p-3">
-          <div class="d-flex justify-content-between align-items-start">
-            <h5 class="card-title">Novidades em Cozinha</h5>
-            <a href="#" class="card-link">Veja mais...</a>
-          </div>
-          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:140px;">
-            <img src="img-amazon/prod5.webp" alt="Jarra de Vidro" class="img-fluid rounded" style="height:130px; object-fit:contain;">
-          </div>
-          <p class="mb-1 fw-semibold" style="font-size:.85rem;">Jarra de Vidro 1.5L Design Moderno</p>
-          <div class="text-warning mb-1" style="font-size:.8rem;">
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
-            <span class="text-muted ms-1">17</span>
-          </div>
-          <p class="mb-0"><strong>R$ 2 <sup>99</sup></strong></p>
-          <small class="text-muted">Entrega GRÁTIS dom., 19 de abr.</small>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== CUPONS EM CAMPO ==================== -->
-  <section class="scroll-section container-fluid px-3 px-lg-4 mt-3 py-3">
-    <h2 class="scroll-title mb-3">Cupons em campo</h2>
-    <div class="d-flex flex-nowrap gap-3 scroll-row pb-2">
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
-          <img src="img-amazon/prod1.webp" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
-        </div>
-        <small class="d-block mt-1 text-success fw-bold text-center">R$ 200 off em Notebooks</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
-          <img src="img-amazon/prod4.jpg" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
-        </div>
-        <small class="d-block mt-1 text-success fw-bold text-center">R$ 200 pra assistir no papai</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
-          <img src="img-amazon/prod6.webp" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
-        </div>
-        <small class="d-block mt-1 text-success fw-bold text-center">20% off em Futebol</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
-          <img src="img-amazon/prod2.jpg" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
-        </div>
-        <small class="d-block mt-1 text-success fw-bold text-center">15% off em Camisas</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
-          <img src="img-amazon/prod1.webp" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
-        </div>
-        <small class="d-block mt-1 text-success fw-bold text-center">16% off em Buds FIT0</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
-          <img src="img-amazon/prod2.jpg" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
-        </div>
-        <small class="d-block mt-1 text-success fw-bold text-center">15% off em Eletrônicos</small>
-      </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:100px;">
-          <img src="img-amazon/prod5.webp" alt="Cupom" class="img-fluid rounded" style="height:90px; object-fit:contain;">
-        </div>
-        <small class="d-block mt-1 text-success fw-bold text-center">10% off</small>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== CARDS – MAIS VENDIDOS ==================== -->
+  
   <section class="container-fluid px-3 px-lg-4 mt-3">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
 
@@ -654,7 +478,7 @@
     </div>
   </section>
 
-  <!-- ==================== MAIS VENDIDOS ELETRÔNICOS (scroll) ==================== -->
+  
   <section class="scroll-section container-fluid px-3 px-lg-4 mt-3 py-3">
     <h2 class="scroll-title mb-3">Mais Vendidos em Eletrônicos</h2>
     <div class="d-flex flex-nowrap gap-3 scroll-row pb-2">
@@ -688,15 +512,10 @@
           <img src="img-amazon/prod6.webp" alt="Eletrônico 6" class="img-fluid" style="height:120px; object-fit:contain;">
         </div>
       </div>
-      <div class="scroll-item">
-        <div class="bg-light rounded d-flex align-items-center justify-content-center" style="width:140px;height:140px;">
-          <i class="bi bi-mouse2-fill text-secondary fs-1"></i>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- ==================== CUPONS EM DESTAQUE (scroll) ==================== -->
+  
   <section class="scroll-section container-fluid px-3 px-lg-4 mt-3 py-3">
     <h2 class="scroll-title mb-3">Confira os cupons em destaque</h2>
     <div class="d-flex flex-nowrap gap-3 scroll-row pb-2">
@@ -739,73 +558,9 @@
     </div>
   </section>
 
-  <!-- ==================== CARDS – MAIS VENDIDOS 2 ==================== -->
-  <section class="container-fluid px-3 px-lg-4 mt-3">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
 
-      <div class="col">
-        <div class="card category-card h-100 shadow-sm p-3">
-          <h5 class="card-title">Mais Vendidos em Livros</h5>
-          <div class="row g-2 mb-2">
-            <div class="col-6">
-              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
-                <img src="img-amazon/prod3.webp" alt="Livro 1" class="img-fluid rounded" style="height:90px; object-fit:contain;">
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height:100px;">
-                <img src="img-amazon/prod6.webp" alt="Livro 2" class="img-fluid rounded" style="height:90px; object-fit:contain;">
-              </div>
-            </div>
-          </div>
-          <p class="mb-1 fw-semibold" style="font-size:.82rem;">Guia Folha de Colorismo + livros</p>
-          <p class="mb-0 fw-bold">R$69<sup>99</sup></p>
-        </div>
-      </div>
 
-      <div class="col">
-        <div class="card category-card h-100 shadow-sm p-3">
-          <h5 class="card-title">Em destaque em Beleza de Luxo</h5>
-          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:160px;">
-            <img src="img-amazon/prod5.webp" alt="Shampoo" class="img-fluid rounded" style="height:150px; object-fit:contain;">
-          </div>
-          <p class="mb-1 fw-semibold" style="font-size:.82rem;">Vichy Dercos Shampoo Collagen Repair</p>
-          <p class="mb-0"><span class="text-danger fw-bold">R$175,90</span></p>
-          <a href="#" class="card-link mt-1 d-inline-block">Compre agora</a>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card category-card h-100 shadow-sm p-3">
-          <h5 class="card-title">Mais Vendidos em Casa</h5>
-          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:160px;">
-            <img src="img-amazon/prod4.jpg" alt="Aspirador" class="img-fluid rounded" style="height:150px; object-fit:contain;">
-          </div>
-          <p class="mb-1 fw-semibold" style="font-size:.82rem;">Aspirador Giratório 360° para Tornar...</p>
-          <div class="text-warning mb-1" style="font-size:.8rem;">
-            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-            <span class="text-muted ms-1">1.0</span>
-          </div>
-          <p class="mb-0 fw-bold">R$299<sup>00</sup></p>
-          <small class="text-muted">Entrega GRÁTIS dom., 19 de abr.</small>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card category-card h-100 shadow-sm p-3">
-          <h5 class="card-title">Novidades em Construção</h5>
-          <div class="bg-light rounded d-flex align-items-center justify-content-center mb-2" style="height:160px;">
-            <img src="img-amazon/prod3.webp" alt="Construção" class="img-fluid rounded" style="height:150px; object-fit:contain;">
-          </div>
-          <p class="mb-1 fw-semibold" style="font-size:.82rem;">Vadia Fire...</p>
-          <p class="mb-0 fw-bold">R$299<sup>00</sup></p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== GAMES E CONSOLES (Cards) ==================== -->
+  
   <section class="container-fluid px-3 px-lg-4 mt-3 mb-4">
     <div class="row">
       <div class="col-12">
@@ -843,7 +598,7 @@
     </div>
   </section>
 
-  <!-- ==================== BANNER LOGIN ==================== -->
+  
   <section class="login-banner py-5 text-center">
     <h3 class="fw-bold mb-3">Veja recomendações personalizadas</h3>
     <a href="#" class="btn btn-amz mb-2">Faça seu login</a>
@@ -852,13 +607,13 @@
     </p>
   </section>
 
-  <!-- ==================== FOOTER ==================== -->
-  <!-- Voltar ao início -->
+  
+  
   <div class="footer-top text-center py-3" onclick="window.scrollTo({top:0,behavior:'smooth'})">
     <span class="text-white" style="font-size:.85rem;">Voltar ao início</span>
   </div>
 
-  <!-- Links do Rodapé -->
+  
   <footer class="footer-main py-4 px-3 px-lg-5">
     <div class="container">
       <div class="row row-cols-2 row-cols-md-4 g-4">
@@ -905,11 +660,11 @@
     </div>
   </footer>
 
-  <!-- Logo inferior e idioma -->
+  
   <div class="footer-bottom text-center py-4">
     <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
       <a href="#" class="text-decoration-none">
-        <img src="img-amazon/logo-amazon.png" alt="Amazon" class="img-fluid bg-white rounded px-3 py-1" style="height: 40px; object-fit: contain;">
+        <img src="img-amazon/logo-amazon.png" alt="Amazon" class="img-fluid rounded px-3 py-1" style="height: 40px; object-fit: contain;">
       </a>
     </div>
     <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap">
@@ -922,7 +677,7 @@
     </div>
   </div>
 
-  <!-- Informações legais -->
+  
   <div class="footer-legal text-center py-3 px-3">
     <div class="d-flex flex-wrap justify-content-center gap-3 mb-2">
       <a href="#" class="text-decoration-none text-white-50" style="font-size:.75rem;">Condições de Uso</a>
@@ -937,7 +692,7 @@
     </p>
   </div>
 
-  <!-- Bootstrap JS -->
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

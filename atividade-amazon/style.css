@@ -1,4 +1,4 @@
-/* ===== Amazon Color Palette (custom properties) ===== */
+
 :root {
   --amz-dark: #131921;
   --amz-dark-alt: #232f3e;
@@ -10,14 +10,14 @@
   --amz-star: #de7921;
 }
 
-/* ===== Global ===== */
+
 body {
   background-color: var(--amz-bg);
   font-family: "Amazon Ember", Arial, sans-serif;
   margin: 0;
 }
 
-/* ===== Top Navbar ===== */
+
 .navbar-amazon {
   background-color: var(--amz-dark);
 }
@@ -47,7 +47,7 @@ body {
   font-weight: 400;
 }
 
-/* Search bar */
+
 .search-bar .input-group {
   border-radius: 4px;
   overflow: hidden;
@@ -84,7 +84,7 @@ body {
   background-color: var(--amz-orange-hover);
 }
 
-/* Cart badge */
+
 .cart-count {
   color: var(--amz-orange);
   font-size: 1rem;
@@ -94,7 +94,7 @@ body {
   margin-left: 2px;
 }
 
-/* ===== Sub-navbar ===== */
+
 .sub-navbar {
   background-color: var(--amz-dark-alt);
 }
@@ -117,12 +117,24 @@ body {
   font-weight: 600;
 }
 
-/* ===== Hero Banner ===== */
+
 .hero-banner {
-  background: linear-gradient(135deg, #e87400 0%, #f09819 50%, #e87400 100%);
   min-height: 300px;
   position: relative;
   overflow: hidden;
+  width: 100%;
+}
+
+.hero-banner.hero-orange {
+  background: linear-gradient(135deg, #e87400 0%, #f09819 50%, #e87400 100%);
+}
+
+.hero-banner.hero-blue {
+  background: linear-gradient(135deg, #005a70 0%, #007185 50%, #005a70 100%);
+}
+
+.hero-banner.hero-dark {
+  background: linear-gradient(135deg, #1f2630 0%, #2a3644 50%, #1f2630 100%);
 }
 
 .hero-banner .hero-content {
@@ -140,7 +152,7 @@ body {
   z-index: 1;
 }
 
-/* ===== Cards de Categoria ===== */
+
 .category-card {
   border: none;
   border-radius: 0;
@@ -182,7 +194,7 @@ body {
   margin-top: 4px;
 }
 
-/* ===== Horizontal scroll sections ===== */
+
 .scroll-section {
   background-color: #fff;
 }
@@ -219,7 +231,7 @@ body {
   background: #f5f5f5;
 }
 
-/* ===== Login Banner ===== */
+
 .login-banner {
   background-color: #fff;
 }
@@ -238,7 +250,7 @@ body {
   background: linear-gradient(to bottom, #f0c14b, #e7a82e);
 }
 
-/* ===== Footer ===== */
+
 .footer-top {
   background-color: var(--amz-dark-alt);
   cursor: pointer;

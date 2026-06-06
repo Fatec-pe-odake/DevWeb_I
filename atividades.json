@@ -1,0 +1,38 @@
+[
+  {
+    "titulo": "Aula 1",
+    "descricao": "Site da CBF para uso de tags HTML e CSS",
+    "imagem": "img/aula1.png",
+    "link": "aula1/index.html",
+    "data": "28 FEV 2026"
+  },
+  {
+    "titulo": "Aula 2",
+    "descricao": "Cópia do site do Curso da Fatec",
+    "imagem": "img/aula2.png",
+    "link": "aula2/index.html",
+    "data": "07 MAR 2026"
+  },
+  {
+    "titulo": "Aula 3",
+    "descricao": "Table HTML",
+    "imagem": "img/aula3.png",
+    "link": "aula3/index.html",
+    "data": "07 MAR 2026"
+  },
+  {
+    "titulo": "Réplica Amazon",
+    "descricao": "Réplica simples da página inicial da Amazon.",
+    "imagem": "atividade-amazon/referencia_amazon.png",
+    "link": "atividade-amazon/index-amazon.html",
+    "data": "14 MAR 2026"
+  },
+  {
+    "titulo": "Aula 4",
+    "descricao": "Exercícios práticos de JavaScript.",
+    "imagem": null,
+    "icone": "code",
+    "link": "aula4/index.html",
+    "data": "21 MAR 2026"
+  }
+]
